@@ -1,6 +1,4 @@
 use std::io;
-use std::cmp::Ordering;
-use rand::Rng;
 
 fn main() {
     println!("Jogo Advinha o número");
@@ -12,6 +10,8 @@ fn main() {
     io::stdin()
         .read_line(&mut guess)
         .expect("falhou em ler a linha");
+
+    let guess : u32 = guess.trim().parse().expect("expected a number");
 
         println!("Você advinhou: {}", guess);
 
